@@ -1,0 +1,20 @@
+{
+  "requests": 60,
+  "expected_unique_events": 30,
+  "http_status_counts": {
+    "202": 60
+  },
+  "ingest_p95_ms": 28.2,
+  "ingest_target_ms": 250,
+  "health_max_ms": 18.97,
+  "health_target_ms": 50,
+  "database_rows": 30,
+  "database_unique_event_ids": 30,
+  "database_status_counts": {
+    "delivered": 30
+  },
+  "downstream_total_accepted": 30,
+  "downstream_unique_events": 30,
+  "pii_redaction_passed": true,
+  "settle_wait_seconds": 6
+}

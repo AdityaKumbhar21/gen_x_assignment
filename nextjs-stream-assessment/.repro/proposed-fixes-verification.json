@@ -1,0 +1,86 @@
+{
+  "scope": "Temporary proof of proposed fixes; not an implementation of the assessment frontend",
+  "application_source_unchanged": true,
+  "dependencies_unchanged": true,
+  "versions": {
+    "next": "15.0.3",
+    "react_declared": "18.3.1"
+  },
+  "build": {
+    "command": "npm run build",
+    "exit_code": 0,
+    "server_page_and_shell": true
+  },
+  "production_checks": [
+    {
+      "name": "Initial HTML contains 500 server-loaded rows",
+      "passed": true
+    },
+    {
+      "name": "Debounced URL-driven loading without duplicate API fetch",
+      "passed": true,
+      "rscRequests": 1,
+      "apiEventRequests": 0,
+      "rows": 100,
+      "hydrationErrors": 0
+    },
+    {
+      "name": "Back cancels pending search and Forward restores filters",
+      "passed": true
+    },
+    {
+      "name": "Older navigation cannot erase newer draft",
+      "passed": true,
+      "rows": 100
+    },
+    {
+      "name": "Late older navigation cannot replace latest results",
+      "passed": true,
+      "rows": 100
+    },
+    {
+      "name": "A-B-A cancellation and leaf render isolation",
+      "passed": true,
+      "cancelled": 2,
+      "summaryCommits": 55,
+      "otherComponentCommits": 0
+    },
+    {
+      "name": "Filter change aborts and clears active stream",
+      "passed": true,
+      "cancelled": 3
+    },
+    {
+      "name": "Network failure produces error UI and clears loading",
+      "passed": true,
+      "unhandledErrors": 0
+    }
+  ],
+  "development_checks": [
+    {
+      "name": "Development mount has no duplicate event API request or hydration error",
+      "passed": true
+    },
+    {
+      "name": "Development replay supports A-B-A cancellation and leaf-only updates",
+      "passed": true,
+      "summaryCommits": 55,
+      "otherComponentCommits": 0,
+      "unhandledErrors": 0
+    },
+    {
+      "name": "HTTP 500 shows error without rendering error body as a summary or leaving loading active",
+      "passed": true
+    }
+  ],
+  "total_check_groups_including_build": 12,
+  "notes": [
+    "Initial event loading and filter navigation use a shared server loader with the original 150-550ms jitter; no competing client API fetch.",
+    "Older-navigation tests separately cover completion before a newer debounce fires and completion after newer results arrive.",
+    "Back/Forward assertions verify URL, input, severity and event counts; Back cancels a pending draft timer.",
+    "Summary owns text/loading/error state; request generations and AbortControllers prevent stale updates.",
+    "The 12ms payload formatting workload remains and is isolated from token updates.",
+    "Temporary commit counters run after commit and do not affect rendered markup.",
+    "This prototype validates architecture and races; the actual frontend still needs implementation and acceptance verification."
+  ]
+}

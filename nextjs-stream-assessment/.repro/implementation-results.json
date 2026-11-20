@@ -1,0 +1,171 @@
+{
+  "implementation_complete": true,
+  "versions": {
+    "next": "15.0.3",
+    "react_declared": "18.3.1"
+  },
+  "build": {
+    "command": "npm run build",
+    "exit_code": 0
+  },
+  "browser_checks": {
+    "production": {
+      "passed": 13,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "Initial HTML contains 500 server-loaded rows",
+          "passed": true
+        },
+        {
+          "name": "Debounced URL-driven loading without duplicate API fetch",
+          "passed": true,
+          "rscRequests": 1,
+          "apiEventRequests": 0,
+          "rows": 100,
+          "hydrationErrors": 0
+        },
+        {
+          "name": "Back cancels pending search and Forward restores filters",
+          "passed": true
+        },
+        {
+          "name": "Older navigation cannot erase newer draft",
+          "passed": true,
+          "rows": 100
+        },
+        {
+          "name": "Late older navigation cannot replace latest results",
+          "passed": true,
+          "rows": 100
+        },
+        {
+          "name": "A-B-A cancellation and leaf render isolation",
+          "passed": true,
+          "cancelled": 2,
+          "summaryCommits": 55,
+          "otherComponentCommits": 0
+        },
+        {
+          "name": "Filter change aborts and clears active stream",
+          "passed": true,
+          "cancelled": 3
+        },
+        {
+          "name": "network produces error UI and clears loading",
+          "passed": true,
+          "unhandledErrors": 0
+        },
+        {
+          "name": "HTTP 500 produces error UI and clears loading",
+          "passed": true,
+          "unhandledErrors": 0
+        },
+        {
+          "name": "missing body produces error UI and clears loading",
+          "passed": true,
+          "unhandledErrors": 0
+        },
+        {
+          "name": "Deep link initializes filtered server data and preserves unrelated query parameters",
+          "passed": true,
+          "initialRows": 15
+        },
+        {
+          "name": "A-B switching cannot retain A text in completed B summary",
+          "passed": true,
+          "cancelled": 1
+        },
+        {
+          "name": "Typing aborts a stream before its debounced navigation",
+          "passed": true,
+          "cancelled": 2
+        }
+      ]
+    },
+    "development": {
+      "passed": 13,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "Initial HTML contains 500 server-loaded rows",
+          "passed": true
+        },
+        {
+          "name": "Debounced URL-driven loading without duplicate API fetch",
+          "passed": true,
+          "rscRequests": 1,
+          "apiEventRequests": 0,
+          "rows": 100,
+          "hydrationErrors": 0
+        },
+        {
+          "name": "Back cancels pending search and Forward restores filters",
+          "passed": true
+        },
+        {
+          "name": "Older navigation cannot erase newer draft",
+          "passed": true,
+          "rows": 100
+        },
+        {
+          "name": "Late older navigation cannot replace latest results",
+          "passed": true,
+          "rows": 100
+        },
+        {
+          "name": "A-B-A cancellation and leaf render isolation",
+          "passed": true,
+          "cancelled": 5,
+          "summaryCommits": 55,
+          "otherComponentCommits": 0
+        },
+        {
+          "name": "Filter change aborts and clears active stream",
+          "passed": true,
+          "cancelled": 7
+        },
+        {
+          "name": "network produces error UI and clears loading",
+          "passed": true,
+          "unhandledErrors": 0
+        },
+        {
+          "name": "HTTP 500 produces error UI and clears loading",
+          "passed": true,
+          "unhandledErrors": 0
+        },
+        {
+          "name": "missing body produces error UI and clears loading",
+          "passed": true,
+          "unhandledErrors": 0
+        },
+        {
+          "name": "Deep link initializes filtered server data and preserves unrelated query parameters",
+          "passed": true,
+          "initialRows": 15
+        },
+        {
+          "name": "A-B switching cannot retain A text in completed B summary",
+          "passed": true,
+          "cancelled": 3
+        },
+        {
+          "name": "Typing aborts a stream before its debounced navigation",
+          "passed": true,
+          "cancelled": 5
+        }
+      ]
+    }
+  },
+  "readme_acceptance_criteria_unchanged": true,
+  "readme_original_constraints_unchanged": true,
+  "dependencies_and_lockfile_unchanged": true,
+  "mock_event_dataset_unchanged": true,
+  "root_layout_unchanged": true,
+  "formatter_workload_ms": 12,
+  "data_loading": "Server page and shared loader; browser makes one RSC navigation per debounced commit, with no competing events API fetch",
+  "render_verification": "Post-commit DOM counters, sampled after selection settles; summary +55, dashboard/list/filters/payload +0 in each mode",
+  "test_tooling": "Existing external playwright-core and Chrome; no project dependencies added",
+  "backend_integration": "Independent mock frontend; no FastAPI calls"
+}

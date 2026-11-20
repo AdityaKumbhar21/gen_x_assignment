@@ -1,0 +1,10 @@
+{
+  "sha256": {
+    "README.md": "8aabfa26d01b03de505e741d95c7944448e6efd4b2c220e9c0e601eb152a545f",
+    "package.json": "fcd3f10508fce0f6316dcfd4f2adff3afea22ac2d7e234b03cad463b8be77684",
+    "package-lock.json": "541bd95050427901a46b07214e778d37c1b013c80b2d9195988b05082db46e53",
+    "src/lib/mockData.ts": "0babb8d8ffec6de3f8d3f7391e04c18927293ea4e7b1aeb11481787ca9dc67c1",
+    "src/app/layout.tsx": "617a29fa2d7cdaf5a834c36d747ab9f0412870a14c9746179c8ab44a8119deb8"
+  },
+  "acceptance_criteria": "1. **Zero Stream Bleed:** Rapidly switching between events (or changing filters while a stream is active) must cleanly abort in-flight streams and never append stale chunks to the newly selected event.\n2. **URL-Driven Filter State:** `search` and `severity` filters must stay synchronized with URL query parameters (`?search=...&severity=...`) with **no duplicate fetches** on mount/change, proper debouncing on search input, and working browser Back/Forward navigation.\n3. **Render Isolation:** Streaming token updates must **only** re-render the leaf summary output component\u2014never the 500-row event list or filter bar (verifiable via React DevTools Profiler or the built-in render counters).\n4. **Server/Client Boundary Hygiene:** Move initial data loading and shell layout to React Server Components where appropriate instead of making the entire page `'use client'`.\n\n"
+}

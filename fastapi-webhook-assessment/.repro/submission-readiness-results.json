@@ -1,0 +1,100 @@
+{
+  "review_date": "2026-11-20",
+  "scope": "FastAPI assessment only; no production code, assessment test, processor or mock changes during this review",
+  "test_run": {
+    "setup_command": "uv sync --locked --extra dev",
+    "test_command": "uv run --extra dev python -m pytest -v -s",
+    "result": "36 passed in 73.35s (0:01:13)",
+    "passed": 36,
+    "failed": 0,
+    "python": "3.12.11",
+    "environment": "fresh virtual environment in an artifact-free source snapshot; no existing venv, caches or editable-install metadata copied"
+  },
+  "original_file_sha256_verified": {
+    "tests/test_burst_load.py": "0de72d94da2973bfbe333e50e0e8fc447a1689999ca9e4a46ebc5d44b0122359",
+    "app/processor.py": "eeda556df495cc3994a9139d08d7737250f932c90a39428c1ad7a14f258d9222",
+    "mock_downstream.py": "0426fa7366ce870282011140683fbd3d700b4ee60cabd462ea0d75a8f178d187"
+  },
+  "original_readme_acceptance_criteria_unchanged": true,
+  "normal_burst": {
+    "requests": 60,
+    "expected_unique_events": 30,
+    "http_status_counts": {
+      "202": 60
+    },
+    "ingest_p95_ms": 31.17,
+    "ingest_target_ms": 250,
+    "health_max_ms": 15.81,
+    "health_target_ms": 50,
+    "database_rows": 30,
+    "database_unique_event_ids": 30,
+    "database_status_counts": {
+      "delivered": 30
+    },
+    "downstream_total_accepted": 30,
+    "downstream_unique_events": 30,
+    "pii_redaction_passed": true,
+    "settle_wait_seconds": 6
+  },
+  "all_first_attempts_503": {
+    "ingest_p95_ms": 74.71,
+    "health_max_ms": 19.05,
+    "delivery_settle_seconds": 4.13
+  },
+  "review_checks": {
+    "gitignore_runtime_cases_checked": 13,
+    "all_source_tests_and_benchmark_scripts_preserved": true,
+    "production_files_unchanged": true,
+    "new_dependencies_added": false,
+    "developer_absolute_paths_found_in_source": false,
+    "credential_signatures_found_in_submission_source": false,
+    "generated_databases_in_submission_source": false,
+    "test_specific_shortcuts_found": false,
+    "submission_source_file_count": 32,
+    "documentation_matches_implementation": true,
+    "original_acceptance_assertions_and_thresholds_preserved": true
+  },
+  "git_metadata_note": "No .git history or remote was supplied. Git ignore rules were checked using temporary Git metadata; installation and the complete suite were verified from a clean source snapshot rather than an actual remote clone.",
+  "remaining_limitations": [
+    "Exactly-once remote effects after response loss, expired ownership or a crash require receiver deduplication/reconciliation; the mock provides neither.",
+    "Observed ambiguous delivery outcomes are failed for reconciliation, not automatically retried.",
+    "SQLite has one writer; four-ASGI-process performance is not benchmarked and per-process CPU budgets need tuning.",
+    "SIGKILL bypasses cleanup and running child CPU work may outlive the graceful drain interval; active-claim recovery can wait up to the default 15-second lease.",
+    "Raw input is stored until preprocessing completes; setting it to NULL does not securely erase WAL history or backups.",
+    "Tests require the documented local ports to be free; performance measurements are local hardware observations."
+  ],
+  "submission_source_files": [
+    ".gitignore",
+    ".repro/CPU_BENCHMARK.md",
+    ".repro/README.md",
+    ".repro/benchmark_cpu.py",
+    ".repro/burst-results.json",
+    ".repro/cpu-benchmark-results.json",
+    ".repro/implementation-burst-results.json",
+    ".repro/measure_burst.py",
+    ".repro/measure_no_retry.py",
+    ".repro/no-retry-results.json",
+    ".repro/protected-files.sha256.json",
+    ".repro/readme-acceptance-criteria.txt",
+    ".repro/submission-burst-results.json",
+    ".repro/submission-readiness-results.json",
+    "DECISIONS.md",
+    "README.md",
+    "app/__init__.py",
+    "app/database.py",
+    "app/downstream.py",
+    "app/main.py",
+    "app/processor.py",
+    "app/workers.py",
+    "implementations.md",
+    "mock_downstream.py",
+    "pyproject.toml",
+    "tests/support_receiver.py",
+    "tests/test_application.py",
+    "tests/test_burst_load.py",
+    "tests/test_database.py",
+    "tests/test_recovery.py",
+    "tests/test_workers.py",
+    "uv.lock"
+  ]
+}

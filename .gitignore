@@ -1,0 +1,45 @@
+# OS and editor artifacts
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Local secrets and settings; retain shareable examples
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Node and Next.js runtime/build artifacts
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+
+# Python runtime/build artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+.coverage
+.coverage.*
+htmlcov/
+
+# Runtime data and temporary output
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.log
+*.tmp
+*.temp
+
+# Keep source, tests, lockfiles, and useful .repro evidence tracked.

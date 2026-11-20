@@ -1,0 +1,5 @@
+{
+  "url": "http://127.0.0.1:3100/?search=auth",
+  "state": "- textbox \"Filter by service, title, or ID...\" [active]: auth\n- combobox:\n  - option \"All Severities\" [selected]\n  - option \"Info\"\n  - option \"Warning\"\n  - option \"Critical\"\n- generic: \"Page renders: 420\"\n- generic: \"[auth-gateway] Upstream timeout spike #1\"\n- generic: evt_0001 · 2026-11-19T11:07:53.401Z\n- generic: critical\n- generic: \"[auth-gateway] Batch checkpoint completed #6\"\n- generic: evt_0",
+  "observation": "Typing auth created separate a, au, aut, auth navigations and API requests. Back reached aut and Forward reached auth; permanent history failure was not reproduced."
+}

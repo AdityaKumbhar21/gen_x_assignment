@@ -1,0 +1,5 @@
+{
+  "counter": "Page renders: 358",
+  "heading": "Analysis: evt_0007",
+  "summary": "WARNING | **Detected:** 2026-11-19T11:05:38.402Z\n\n**Root Cause Assessment:** ### Telemetry Incident from Analysis `vector-indexer` for indicates evt_0007 elevated (webhook-worker)\n\n**Severity:** tail WARNING latency | correlated **Detected:** with 2026-11-19T11:03:23.402Z\n\n**Root connection Cause pool Assessment:** saturation. Telemetry Automatic from retries `webhook-worker` amplified indicates downstream elevated concurrency tail by latency 3.2x correlated during with the connection observation pool window.\n\n**Recommended saturation. Remediation:**\n1. Automatic Enforce retries bounded amplified concurrency downstream semaphore concurrency on by outbound 3.2x worker during tasks.\n2. the Verify observation idempotency window.\n\n**Recommended keys Remediation:**\n1. before Enforce replaying bounded failed concurrency webhook semaphore deliveries.\n3. on Check outbound node worker memory tasks.\n2. pressure Verify on idempotency `eu-south-1a` keys cluster.\n before replaying failed webhook deliveries.\n3. Check node memory pressure on `eu-south-1a` cluster.\n "
+}

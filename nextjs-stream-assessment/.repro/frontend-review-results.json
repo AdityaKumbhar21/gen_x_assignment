@@ -1,0 +1,270 @@
+{
+  "review_date": "2026-11-20",
+  "baseURL": "http://127.0.0.1:3100",
+  "scenarios": {
+    "rapid_A_B_A": {
+      "initialCounter": 10,
+      "finalCounter": 202,
+      "pageRenderIncrease": 192,
+      "initialEventCount": 500,
+      "initialEventRequests": [
+        {
+          "event": "request",
+          "path": "/api/events",
+          "query": "",
+          "elapsedMs": 1242
+        },
+        {
+          "event": "request",
+          "path": "/api/events",
+          "query": "",
+          "elapsedMs": 1243
+        }
+      ],
+      "heading": "Analysis: evt_0001",
+      "summary": "Assessment:** ### Telemetry Incident from Analysis `auth-gateway` for indicates evt_0002 elevated (webhook-worker)\n\n**Severity:** ### Incident tail INFO latency | Analysis correlated **Detected:** for with 2026-11-20T10:02:00.960Z\n\n**Root evt_0001 connection Cause (auth-gateway)\n\n**Severity:** pool Assessment:** CRITICAL saturation. Telemetry | Automatic from **Detected:** retries `webhook-worker` 2026-11-20T10:02:45.960Z\n\n**Root amplified indicates Cause downstream elevated Assessment:** concurrency tail Telemetry by latency from 3.2x correlated `auth-gateway` during with indicates the connection elevated observation pool tail window.\n\n**Recommended saturation. latency Remediation:**\n1. Automatic correlated Enforce retries with bounded amplified connection concurrency downstream pool semaphore concurrency saturation. on by Automatic outbound 3.2x retries worker during amplified tasks.\n2. the downstream Verify observation concurrency idempotency window.\n\n**Recommended by keys Remediation:**\n1. 3.2x before Enforce during replaying bounded the failed concurrency observation webhook semaphore window.\n\n**Recommended deliveries.\n3. on Remediation:**\n1. Check outbound Enforce node worker bounded memory tasks.\n2. concurrency pressure Verify semaphore on idempotency on `eu-south-1a` keys outbound cluster.\n before worker replaying tasks.\n2. failed Verify webhook idempotency deliveries.\n3. keys Check before node replaying memory failed pressure webhook on deliveries.\n3. `eu-south-1a` Check cluster.\n node memory pressure on `eu-south-1a` cluster.\n ",
+      "containsStaleEventB": true,
+      "network": [
+        {
+          "event": "request",
+          "path": "/api/events",
+          "query": "",
+          "elapsedMs": 1242
+        },
+        {
+          "event": "request",
+          "path": "/api/events",
+          "query": "",
+          "elapsedMs": 1243
+        },
+        {
+          "event": "requestfinished",
+          "path": "/api/events",
+          "query": "",
+          "elapsedMs": 1529
+        },
+        {
+          "event": "requestfinished",
+          "path": "/api/events",
+          "query": "",
+          "elapsedMs": 2033
+        },
+        {
+          "event": "request",
+          "path": "/api/stream-summary",
+          "query": "?eventId=evt_0001",
+          "elapsedMs": 2657
+        },
+        {
+          "event": "request",
+          "path": "/api/stream-summary",
+          "query": "?eventId=evt_0002",
+          "elapsedMs": 3517
+        },
+        {
+          "event": "request",
+          "path": "/api/stream-summary",
+          "query": "?eventId=evt_0001",
+          "elapsedMs": 3750
+        },
+        {
+          "event": "requestfinished",
+          "path": "/api/stream-summary",
+          "query": "?eventId=evt_0001",
+          "elapsedMs": 5939
+        },
+        {
+          "event": "requestfinished",
+          "path": "/api/stream-summary",
+          "query": "?eventId=evt_0002",
+          "elapsedMs": 6446
+        },
+        {
+          "event": "requestfinished",
+          "path": "/api/stream-summary",
+          "query": "?eventId=evt_0001",
+          "elapsedMs": 6678
+        }
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [
+        "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps://react.dev/link/hydration-mismatch\n\n  ...\n    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>\n      <LoadingBoundary hasLoading={false} loading={undefined} loadingStyles={undefined} loadingScripts={undefined}>\n        <NotFoundBoundary notFound={[...]} notFoundStyles={[...]}>\n          <NotFoundErrorBoundary pathname=\"/\" notFound={[...]} notFoundStyles={[...]} asNotFound={undefined} ...>\n            <RedirectBoundary>\n              <RedirectErrorBoundary router={{...}}>\n                <InnerLayoutRouter parallelRouterKey=\"children\" url=\"/\" tree={[...]} childNodes={Map} segmentPath={[...]} ...>\n                  <ClientPageRoot Component={function DashboardPage} searchParams={{}} params={{}}>\n                    <DashboardPage params={Promise} searchParams={Promise}>\n                      <div style={{display:\"grid\", ...}}>\n                        <div style={{...}}>\n                          <div style={{padding:\"16px\", ...}}>\n                            <input>\n                            <select>\n                            <span style={{fontSize:\"...\", ...}}>\n+                             2\n-                             1\n                          ...\n                        ...\n                  ...\n"
+      ]
+    },
+    "filter_during_stream": {
+      "severity": "info",
+      "heading": "Analysis: evt_0001",
+      "eventAStillListed": false,
+      "streamingAfterFilter": true,
+      "summaryLengthDuring": 221,
+      "summaryLengthAfter": 564,
+      "streamFailures": [],
+      "network": [
+        {
+          "event": "request",
+          "path": "/api/events",
+          "query": "",
+          "elapsedMs": 244
+        },
+        {
+          "event": "request",
+          "path": "/api/events",
+          "query": "",
+          "elapsedMs": 244
+        },
+        {
+          "event": "requestfinished",
+          "path": "/api/events",
+          "query": "",
+          "elapsedMs": 764
+        },
+        {
+          "event": "requestfinished",
+          "path": "/api/events",
+          "query": "",
+          "elapsedMs": 1159
+        },
+        {
+          "event": "request",
+          "path": "/api/stream-summary",
+          "query": "?eventId=evt_0001",
+          "elapsedMs": 1673
+        },
+        {
+          "event": "request",
+          "path": "/api/events",
+          "query": "?severity=info",
+          "elapsedMs": 2146
+        },
+        {
+          "event": "requestfinished",
+          "path": "/api/events",
+          "query": "?severity=info",
+          "elapsedMs": 2567
+        },
+        {
+          "event": "requestfinished",
+          "path": "/api/stream-summary",
+          "query": "?eventId=evt_0001",
+          "elapsedMs": 4608
+        }
+      ]
+    },
+    "search_and_history": {
+      "controlledLatency": "Real older search=a response delayed by 1000 ms; data unchanged",
+      "input": "auth",
+      "displayedEventCount": 500,
+      "expectedEventCount": 100,
+      "staleResultsObserved": true,
+      "historyBefore": 2,
+      "historyAfter": 5,
+      "back": {
+        "url": "http://127.0.0.1:3100/?search=aut",
+        "input": "aut"
+      },
+      "forward": {
+        "url": "http://127.0.0.1:3100/?search=auth",
+        "input": "auth"
+      },
+      "network": [
+        {
+          "event": "request",
+          "path": "/api/events",
+          "query": "?search=a",
+          "elapsedMs": 1630
+        },
+        {
+          "event": "request",
+          "path": "/api/events",
+          "query": "?search=au",
+          "elapsedMs": 1725
+        },
+        {
+          "event": "request",
+          "path": "/api/events",
+          "query": "?search=aut",
+          "elapsedMs": 1808
+        },
+        {
+          "event": "request",
+          "path": "/api/events",
+          "query": "?search=auth",
+          "elapsedMs": 1891
+        },
+        {
+          "event": "requestfinished",
+          "path": "/api/events",
+          "query": "?search=au",
+          "elapsedMs": 2226
+        },
+        {
+          "event": "requestfinished",
+          "path": "/api/events",
+          "query": "?search=aut",
+          "elapsedMs": 2260
+        },
+        {
+          "event": "requestfinished",
+          "path": "/api/events",
+          "query": "?search=auth",
+          "elapsedMs": 2359
+        },
+        {
+          "event": "requestfinished",
+          "path": "/api/events",
+          "query": "?search=a",
+          "elapsedMs": 2906
+        },
+        {
+          "event": "request",
+          "path": "/api/events",
+          "query": "?search=aut",
+          "elapsedMs": 3874
+        },
+        {
+          "event": "requestfinished",
+          "path": "/api/events",
+          "query": "?search=aut",
+          "elapsedMs": 4229
+        },
+        {
+          "event": "request",
+          "path": "/api/events",
+          "query": "?search=auth",
+          "elapsedMs": 4575
+        },
+        {
+          "event": "requestfinished",
+          "path": "/api/events",
+          "query": "?search=auth",
+          "elapsedMs": 4823
+        }
+      ]
+    },
+    "network_failure": {
+      "injectedFailure": "Abort stream fetch before response",
+      "unhandledErrors": [
+        "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps://react.dev/link/hydration-mismatch\n\n  ...\n    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>\n      <LoadingBoundary hasLoading={false} loading={undefined} loadingStyles={undefined} loadingScripts={undefined}>\n        <NotFoundBoundary notFound={[...]} notFoundStyles={[...]}>\n          <NotFoundErrorBoundary pathname=\"/\" notFound={[...]} notFoundStyles={[...]} asNotFound={undefined} ...>\n            <RedirectBoundary>\n              <RedirectErrorBoundary router={{...}}>\n                <InnerLayoutRouter parallelRouterKey=\"children\" url=\"/\" tree={[...]} childNodes={Map} segmentPath={[...]} ...>\n                  <ClientPageRoot Component={function DashboardPage} searchParams={{}} params={{}}>\n                    <DashboardPage params={Promise} searchParams={Promise}>\n                      <div style={{display:\"grid\", ...}}>\n                        <div style={{...}}>\n                          <div style={{padding:\"16px\", ...}}>\n                            <input>\n                            <select>\n                            <span style={{fontSize:\"...\", ...}}>\n+                             2\n-                             1\n                          ...\n                        ...\n                  ...\n",
+        "Failed to fetch"
+      ],
+      "streamingIndicatorStuck": true
+    }
+  },
+  "browser": "157.0.8103.79",
+  "verification": {
+    "application_and_config_unchanged": true,
+    "backend_required": false,
+    "build_exit_code": 1,
+    "build_failure": "Missing Suspense boundary around useSearchParams on /",
+    "render_counter_note": "Development counter; demonstrates parent rendering, not a production timing benchmark",
+    "history_note": "Back and Forward reached expected values in this run; persistent breakage not reproduced",
+    "controlled_scenarios": [
+      "Older search=a response delayed by 1000ms without modifying its data",
+      "Stream request aborted to simulate a network failure"
+    ],
+    "source_boundary_audit": "layout.tsx is already a Server Component; page.tsx is client with empty initial events and effect-driven loading",
+    "readme_constraints": "Native React/Next.js only for application fixes; no Zustand/Redux/Jotai/TanStack Query/SWR. DECISIONS.md remains a template."
+  }
+}

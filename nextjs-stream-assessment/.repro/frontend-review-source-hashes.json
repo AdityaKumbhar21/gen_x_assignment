@@ -1,0 +1,14 @@
+{
+  "src/app/layout.tsx": "617a29fa2d7cdaf5a834c36d747ab9f0412870a14c9746179c8ab44a8119deb8",
+  "src/app/page.tsx": "1a30eb732b256d67700ea27e638c33f2c8e96155c31294ca7b37355fc9635a1d",
+  "src/components/HeavyPayloadFormatter.tsx": "a5c0d60edd87570d0e82438d18398215c0af189430dbabbe118bc8a05f0973aa",
+  "src/lib/mockData.ts": "0babb8d8ffec6de3f8d3f7391e04c18927293ea4e7b1aeb11481787ca9dc67c1",
+  "src/app/api/stream-summary/route.ts": "c983f1b2e0bd4d6a9a9a7066a7a88100ac6753eb20b78769a2f2e0e783af6769",
+  "src/app/api/events/route.ts": "ff113ccce604ca7b156ce57d2d4b5fd9d56891f198db9be9435c425980434d28",
+  "README.md": "8aabfa26d01b03de505e741d95c7944448e6efd4b2c220e9c0e601eb152a545f",
+  "DECISIONS.md": "39ea4385ad410d1ec831a0b855a49fe1020d1d4d0d58361efabb12d90911739a",
+  "package.json": "fcd3f10508fce0f6316dcfd4f2adff3afea22ac2d7e234b03cad463b8be77684",
+  "package-lock.json": "541bd95050427901a46b07214e778d37c1b013c80b2d9195988b05082db46e53",
+  "next.config.mjs": "7378473489712cc5aec4dfd4f6623faf2dcf5d90f33c0594fdad698afb8c66b2",
+  "tsconfig.json": "1105489e1aa28d3e6758f68cd26eb627a731b680a7865dbe36373df54fb7dd89"
+}

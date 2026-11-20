@@ -1,0 +1,12 @@
+{
+  "failed_event_id": "retry_probe_4",
+  "settle_wait_seconds": 6,
+  "database_rows_for_failed_event": [
+    [
+      "retry_probe_4",
+      "pending"
+    ]
+  ],
+  "failed_event_accepted_downstream": false,
+  "note": "The existing mock fails randomly; null failed_event_id means no 503 occurred in 20 attempts."
+}
